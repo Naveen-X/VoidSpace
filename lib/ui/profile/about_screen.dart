@@ -156,7 +156,7 @@ class AboutScreen extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            "A DEVELOPER",
+            "A Developer",
             style: GoogleFonts.ibmPlexMono(
               fontSize: 11,
               color: theme.brightness == Brightness.dark ? Colors.cyanAccent : Colors.cyan[700],
