@@ -430,7 +430,7 @@ class AboutScreen extends StatelessWidget {
               ),
             ),
             Text(
-              "XD",
+              "DEVH",
               style: GoogleFonts.ibmPlexMono(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
