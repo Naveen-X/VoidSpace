@@ -350,15 +350,11 @@ class _ItemDetailScreenState extends State<ItemDetailScreen> {
     HapticService.light();
     try {
       final shortUrl = await VoidShareService.shareAsWebsite(_editedItem);
-      Clipboard.setData(ClipboardData(text: shortUrl));
       HapticService.success();
       if (!mounted) return;
       Navigator.pop(sheetContext);
-      VoidSnackBar.show(
-        context,
-        message: 'Website link copied to clipboard!',
-        icon: Icons.check_circle_rounded,
-      );
+      // ignore: deprecated_member_use
+      await Share.share(shortUrl, subject: 'Shared from Void Space');
     } catch (e) {
       if (!mounted) return;
       HapticService.heavy();
