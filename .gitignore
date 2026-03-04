@@ -137,6 +137,14 @@ app.*.symbols
 # Obfuscation related
 app.*.map.json
 
+# Debug symbols from --split-debug-info (do not commit)
+symbols/
+
+# Dart-define env files (contain secrets — use CI secrets instead)
+*.dart_define
+.dart_define
+dart_define.sh
+
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
 !**/ios/**/default.mode2v3
